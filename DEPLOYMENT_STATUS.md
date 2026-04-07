@@ -9,9 +9,9 @@
 - **Verification**: Plaid Link integration ready
 - **Features**: Category browsing, listing creation, verified badges
 
-### 2. **Domain Setup ✅**
-- **Domain**: `amandaslist.com` (owned by Amanda Bradford)
-- **DNS Status**: ✅ Configured via GoDaddy API
+### 2. **Domain Setup**
+- **Domain**: `mandaslist.com` (owned by Amanda Bradford)  
+- **DNS Status**: ⏳ Needs manual configuration (may be under different registrar)
   - A record: `76.76.19.61` (Vercel)
   - CNAME www: `cname.vercel-dns.com`
 
@@ -73,7 +73,7 @@ node setup-database.js
 
 ## 🔥 **LIVE RESULT**
 
-Once deployed: **https://amandaslist.com**
+Once deployed: **https://mandaslist.com**
 
 **"Craigslist for the verified community - powered by Plaid"**
 

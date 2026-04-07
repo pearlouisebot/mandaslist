@@ -24,7 +24,7 @@
 
 ### 3. Domain Setup (GoDaddy)
 
-**Domain**: `amandaslist.com` ✅ (owned by Amanda Bradford)
+**Domain**: `mandaslist.com` (owned by Amanda Bradford)
 
 **DNS Records needed**:
 ```
@@ -37,24 +37,18 @@ Name: @
 Value: 76.76.19.61
 ```
 
-**GoDaddy API Setup**:
-```bash
-curl -X PUT "https://api.godaddy.com/v1/domains/mandaslist.com/records" \
-  -H "Authorization: sso-key gGzJT388y34k_EdfvKkHr5hbdiFVqUniZjp:KcvjwXePkGHApoVgF9BvdB" \
-  -H "Content-Type: application/json" \
-  -d '[
-    {
-      "type": "CNAME",
-      "name": "www",
-      "data": "cname.vercel-dns.com"
-    },
-    {
-      "type": "A", 
-      "name": "@",
-      "data": "76.76.19.61"
-    }
-  ]'
+**DNS Setup for mandaslist.com**:
 ```
+Type: A
+Name: @  
+Value: 76.76.19.61
+
+Type: CNAME
+Name: www
+Value: cname.vercel-dns.com
+```
+
+*Note: mandaslist.com may be under different registrar - configure DNS manually if needed.*
 
 ### 4. Database Setup
 
@@ -65,7 +59,7 @@ node setup-database.js
 
 ## 🎯 Final Result
 
-- **Live URL**: https://amandaslist.com ✅ (DNS configured)
+- **Live URL**: https://mandaslist.com
 - **Features**: Craigslist clone with Plaid verification
 - **Stack**: Next.js 14 + Supabase + Tailwind CSS
 - **Verification**: Plaid Link integration ready
