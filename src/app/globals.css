@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MandasList Custom Styles */
+.craigslist-header {
+  @apply bg-purple-800 text-white py-4 px-6;
+}
+
+.craigslist-nav {
+  @apply bg-gray-100 border-b border-gray-300 py-2 px-6;
+}
+
+.category-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6;
+}
+
+.category-card {
+  @apply bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer;
+}
+
+.listing-card {
+  @apply bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow;
+}
+
+.verified-badge {
+  @apply bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full;
+}
+
+.unverified-badge {
+  @apply bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full;
+}
+
+/* Craigslist-style typography */
+.craigslist-link {
+  @apply text-purple-700 hover:text-purple-900 underline;
+}
+
+.craigslist-title {
+  @apply text-2xl font-bold text-purple-800 mb-4;
+}
+
+/* Form styles */
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+.btn-primary {
+  @apply bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded;
+}
+
+.btn-secondary {
+  @apply bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded;
+}
+
+/* Plaid verification styles */
+.plaid-verify-button {
+  @apply bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg flex items-center gap-2;
+}
