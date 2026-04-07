@@ -83,4 +83,4 @@ Optimized for:
 
 ---
 
-Built with ❤️ for the verified community.
+Built with ❤️ for the verified community.# MandasList.com - Live!
