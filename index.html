@@ -1,1 +1,236 @@
-<!DOCTYPE html><html><head><title>MandasList</title></head><body><h1 style='color: purple;'>🚀 MandasList.com is LIVE!</h1><p>Your Craigslist clone is working!</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MandasList - Verified Classifieds</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .craigslist-link { @apply text-purple-700 hover:text-purple-900 underline; }
+        .verified-badge { @apply bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full; }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <!-- Header -->
+    <header class="bg-purple-800 text-white">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <h1 class="text-4xl font-bold">
+                    <a href="/" class="hover:text-purple-200">mandaslist</a>
+                </h1>
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-2 bg-purple-700 px-3 py-1 rounded-full">
+                        <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-sm">Plaid Verified</span>
+                    </div>
+                    <a href="#post" class="bg-white text-purple-800 px-4 py-2 rounded font-semibold hover:bg-gray-100">post</a>
+                    <a href="#verify" class="bg-green-600 px-4 py-2 rounded font-semibold hover:bg-green-700">get verified</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Location and Search Bar -->
+    <div class="bg-gray-100 border-b">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <select class="bg-white border rounded px-3 py-1">
+                        <option>austin</option>
+                        <option>dallas</option>
+                        <option>houston</option>
+                        <option>san antonio</option>
+                    </select>
+                </div>
+                <div class="flex-1 flex gap-2">
+                    <input type="text" placeholder="search mandaslist" class="flex-1 px-3 py-1 border rounded">
+                    <button class="bg-purple-600 text-white px-4 py-1 rounded hover:bg-purple-700">
+                        <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+            <!-- Left Column - Categories -->
+            <div class="lg:col-span-2">
+                <h2 class="text-xl font-bold mb-4 text-purple-800">browse by category</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- For Sale -->
+                    <div class="bg-white border rounded-lg p-4">
+                        <h3 class="text-lg font-bold text-purple-700 mb-3 border-b pb-2">
+                            <a href="#for-sale" class="hover:underline">for sale</a>
+                        </h3>
+                        <ul class="space-y-1">
+                            <li><a href="#electronics" class="text-purple-600 hover:underline text-sm">electronics</a></li>
+                            <li><a href="#furniture" class="text-purple-600 hover:underline text-sm">furniture</a></li>
+                            <li><a href="#vehicles" class="text-purple-600 hover:underline text-sm">vehicles</a></li>
+                            <li><a href="#clothing" class="text-purple-600 hover:underline text-sm">clothing</a></li>
+                            <li><a href="#books" class="text-purple-600 hover:underline text-sm">books</a></li>
+                            <li><a href="#sporting" class="text-purple-600 hover:underline text-sm">sporting goods</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Housing -->
+                    <div class="bg-white border rounded-lg p-4">
+                        <h3 class="text-lg font-bold text-purple-700 mb-3 border-b pb-2">
+                            <a href="#housing" class="hover:underline">housing</a>
+                        </h3>
+                        <ul class="space-y-1">
+                            <li><a href="#apartments" class="text-purple-600 hover:underline text-sm">apartments</a></li>
+                            <li><a href="#houses" class="text-purple-600 hover:underline text-sm">houses</a></li>
+                            <li><a href="#rooms" class="text-purple-600 hover:underline text-sm">rooms</a></li>
+                            <li><a href="#vacation" class="text-purple-600 hover:underline text-sm">vacation rentals</a></li>
+                            <li><a href="#real-estate" class="text-purple-600 hover:underline text-sm">real estate</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Jobs -->
+                    <div class="bg-white border rounded-lg p-4">
+                        <h3 class="text-lg font-bold text-purple-700 mb-3 border-b pb-2">
+                            <a href="#jobs" class="hover:underline">jobs</a>
+                        </h3>
+                        <ul class="space-y-1">
+                            <li><a href="#tech" class="text-purple-600 hover:underline text-sm">tech</a></li>
+                            <li><a href="#sales" class="text-purple-600 hover:underline text-sm">sales</a></li>
+                            <li><a href="#admin" class="text-purple-600 hover:underline text-sm">admin</a></li>
+                            <li><a href="#gig-work" class="text-purple-600 hover:underline text-sm">gig work</a></li>
+                            <li><a href="#part-time" class="text-purple-600 hover:underline text-sm">part-time</a></li>
+                            <li><a href="#internships" class="text-purple-600 hover:underline text-sm">internships</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="bg-white border rounded-lg p-4">
+                        <h3 class="text-lg font-bold text-purple-700 mb-3 border-b pb-2">
+                            <a href="#services" class="hover:underline">services</a>
+                        </h3>
+                        <ul class="space-y-1">
+                            <li><a href="#automotive" class="text-purple-600 hover:underline text-sm">automotive</a></li>
+                            <li><a href="#beauty" class="text-purple-600 hover:underline text-sm">beauty</a></li>
+                            <li><a href="#computer" class="text-purple-600 hover:underline text-sm">computer</a></li>
+                            <li><a href="#creative" class="text-purple-600 hover:underline text-sm">creative</a></li>
+                            <li><a href="#legal" class="text-purple-600 hover:underline text-sm">legal</a></li>
+                            <li><a href="#labor" class="text-purple-600 hover:underline text-sm">labor</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Community -->
+                    <div class="bg-white border rounded-lg p-4">
+                        <h3 class="text-lg font-bold text-purple-700 mb-3 border-b pb-2">
+                            <a href="#community" class="hover:underline">community</a>
+                        </h3>
+                        <ul class="space-y-1">
+                            <li><a href="#events" class="text-purple-600 hover:underline text-sm">events</a></li>
+                            <li><a href="#volunteers" class="text-purple-600 hover:underline text-sm">volunteers</a></li>
+                            <li><a href="#classes" class="text-purple-600 hover:underline text-sm">classes</a></li>
+                            <li><a href="#groups" class="text-purple-600 hover:underline text-sm">groups</a></li>
+                            <li><a href="#local-news" class="text-purple-600 hover:underline text-sm">local news</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Personal -->
+                    <div class="bg-white border rounded-lg p-4">
+                        <h3 class="text-lg font-bold text-purple-700 mb-3 border-b pb-2">
+                            <a href="#personal" class="hover:underline">personal</a>
+                        </h3>
+                        <ul class="space-y-1">
+                            <li><a href="#dating" class="text-purple-600 hover:underline text-sm">dating</a></li>
+                            <li><a href="#platonic" class="text-purple-600 hover:underline text-sm">platonic</a></li>
+                            <li><a href="#missed" class="text-purple-600 hover:underline text-sm">missed connections</a></li>
+                            <li><a href="#rants" class="text-purple-600 hover:underline text-sm">rants</a></li>
+                            <li><a href="#advice" class="text-purple-600 hover:underline text-sm">advice</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Info/Actions -->
+            <div class="space-y-6">
+                
+                <!-- Verification Notice -->
+                <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <div class="flex items-center gap-2 mb-2">
+                        <svg class="h-5 w-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <h3 class="font-bold text-green-800">Verified Marketplace</h3>
+                    </div>
+                    <p class="text-sm text-green-700 mb-3">
+                        All sellers are verified through Plaid bank verification for your safety and security.
+                    </p>
+                    <a href="#verify" class="block w-full text-center bg-green-600 text-white py-2 rounded hover:bg-green-700">
+                        Get Verified Now
+                    </a>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="bg-white border rounded-lg p-4">
+                    <h3 class="font-bold mb-3">recent activity</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• <span class="text-green-600">✓</span> iPhone 15 Pro - $800 (verified seller)</li>
+                        <li>• <span class="text-green-600">✓</span> 2BR Apartment - $2500/mo (verified)</li>
+                        <li>• <span class="text-green-600">✓</span> MacBook Air M2 - $900 (verified seller)</li>
+                        <li>• <span class="text-green-600">✓</span> Tesla Model 3 - $35K (verified seller)</li>
+                    </ul>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="bg-white border rounded-lg p-4">
+                    <h3 class="font-bold mb-3">marketplace stats</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Active listings:</span>
+                            <span class="font-semibold">1,247</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Verified users:</span>
+                            <span class="font-semibold">892</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Completed deals:</span>
+                            <span class="font-semibold">3,421</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t mt-12">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-sm text-gray-600">
+                    © 2026 MandasList - Verified Classifieds Platform
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="#about" class="text-purple-600 hover:underline">about</a>
+                    <a href="#safety" class="text-purple-600 hover:underline">safety</a>
+                    <a href="#terms" class="text-purple-600 hover:underline">terms</a>
+                    <a href="#privacy" class="text-purple-600 hover:underline">privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('MandasList - Verified Classifieds Platform loaded!');
+        });
+    </script>
+</body>
+</html>
